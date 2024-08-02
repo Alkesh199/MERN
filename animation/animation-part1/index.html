@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+          box-sizing: border-box;
+          margin:0;
+          padding:0;
+        }
+        .main-div{
+            width:300px;
+            height:300px;
+            border:2px solid black;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            margin:50px auto;
+            animation-name: bg-changer;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .inner-div{
+            width:70px;
+            height:70px;
+            position:absolute;
+            background-color:hotpink;
+            animation-name: move-inner;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            /* animation-fill-mode: forwards; */
+            animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+        }
+        @keyframes bg-changer {
+            50%{
+                background-color:black;
+            }
+            75%{
+                background-color:white;
+            }
+            100%{
+                background-color:grey;
+            }
+        }
+        @keyframes move-inner {
+            50%{
+                border-radius:50%;
+            }
+            100%{
+                background-color:green;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "main-div">
+        <div class = "inner-div"></div>
+    </div>
+</body>
+</html>

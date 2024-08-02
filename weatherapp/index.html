@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <script src = "/app.js" ></script>
+</head>
+<body>
+    
+    <header class = "header">
+        <i class="fa-solid fa-cloud cloud-image"></i>
+       <p class="app-name">sahiweather</p>
+    </header>
+    <main class ="main-section">
+        <div class="input-div">
+             <input type="text" id="searchinput" placeholder="location">
+            <button type ="button" id ="searchButton">Search</button>
+        </div>
+
+        <div class = "data-div">
+           <div>
+             <h1 id="tempt">temprature</h1>
+           </div>
+           <div class ="middle-div">
+              <p id="location">your location</p>
+              <p>
+                <span>last updated: </span>
+                <span id="span1">time</span>
+                <span id="span2">day</span>
+                <span id="span3">date</span>
+            </p>
+            </div>
+           <div class = "last-div">
+            <div class ="weather-img">
+                <img id="weather-img" src="//cdn.weatherapi.com/weather/64x64/day/119.png"></img>
+            </div>
+            <p id="weather-text">Weather condition</p>
+           </div>
+        </div>
+    </main>
+</body>
+</html>

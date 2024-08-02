@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+          box-sizing: border-box;
+          margin:0;
+          padding:0;
+        }
+        body{
+            /* animation-name:bg-changer-body; */
+            animation-delay:2s;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        .main-div{
+            width:400px;
+            height:400px;
+            background-color:grey;
+            margin:50px auto;
+            position:relative;
+            animation-name:rotate-div;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        .inner-div,.inner-div2{
+            width:70px;
+            height:70px;
+            position:absolute;
+            animation-fill-mode:backwards;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        .inner-div{
+            top:0%;
+            left:0%;
+            background-color:hotpink;
+            border:2px solid black;
+            animation-name: move-inner;
+        }
+        .inner-div2{
+            top:0%;
+            left:100%;
+            transform: translateX(-100%);
+            border:2px solid rgb(34, 202, 19);
+            background-color:rgba(16, 10, 107, 0.491);
+            animation-name:move-innerdiv2;
+        }
+        @keyframes bg-changer-body {
+            0%{
+                background-color: red;
+            }
+            30%{
+                background-color: coral;
+            }
+            60%{
+                background-color: yellow;
+            }
+            90%{
+                background-color: teal;
+            }
+        }
+        @keyframes move-inner {
+            0%{
+              top:0%;
+              left:0%;
+            }
+            33%{
+              top:100%;
+              left:0%;
+              transform:translateY(-100%)
+            }
+             50%{
+              border-radius:50%;
+            } 
+           66%{
+                top:100%;
+                left:100%;
+                transform: translate(-100%,-100%);
+            }
+            100%{
+               top:0%;
+               left:100%;
+               transform:translateX(-100%)
+            }  
+            
+        }
+
+        @keyframes move-innerdiv2 {
+            0%{
+              top:0%;
+              left:100%;
+              transform: translateX(-100%);
+            }
+            66%{
+              top:100%;
+              left:0%;
+              transform:translateY(-100%)
+            }
+             50%{
+              border-radius:50%;
+            } 
+           33%{
+                top:100%;
+                left:100%;
+                transform: translate(-100%,-100%);
+            }
+            100%{
+               transform:translate(0%,0%);
+               top:0%;
+               left:0%;
+            }  
+            
+        }
+
+        @keyframes rotate-div {
+            to{
+                transform: rotateX(80deg);
+                transform: rotateY(60deg);
+                transform: rotateZ(120deg);
+            }
+            25%{
+                background-color:black;
+            }
+            50%{
+                border-radius:50%;
+                transform: rotateZ(80deg);
+                transform: rotateY(60deg);
+                transform: rotateX(120deg);
+            }
+            75%{
+                background-color: blue;
+                transform: rotateY(80deg);
+                transform: rotateX(60deg);
+                transform: rotateZ(120deg);
+            }
+            100%{
+                background-color: chartreuse;
+                transform: rotate3d(360)
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "main-div">
+        <div class = "inner-div"></div>
+        <div class = "inner-div2"></div>
+    </div>
+</body>
+</html>
